@@ -10,7 +10,7 @@ under the density ratio model for three-class diagnostic test.
        - qt      : Integer specifying the basis function q(x):
                    1 = x (default); 2 = log(x); 3 = c(x, x^2); 4 = c(log(x), log(x)^2).
                    Note that when qt = 2 or 4, all observations must be positive.
-       - level   : confidence level for the confidence intervals (default = 0.05).
+       - level   : confidence level for the confidence intervals (default = 0.95).
        - warn    : Logical; if TRUE, prints warnings (default = TRUE).
     
     - Outputs:
