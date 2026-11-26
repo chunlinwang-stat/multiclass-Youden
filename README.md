@@ -10,9 +10,7 @@ under the density ratio model for three-class diagnostic test.
        - qt      : Integer specifying the basis function q(x):
                    1 = x (default); 2 = log(x); 3 = c(x, x^2); 4 = c(log(x), log(x)^2).
                    Note that when qt = 2 or 4, all observations must be positive.
-       - level   : Significance level for confidence intervals (default = 0.05).
-       - CI.type : Type of transformation for the confidence interval of the generalized Youden index.
-                   'NA' uses no transformation (default); 'logit' uses logit transformation.
+       - level   : confidence level for the confidence intervals (default = 0.05).
        - warn    : Logical; if TRUE, prints warnings (default = TRUE).
     
     - Outputs:
