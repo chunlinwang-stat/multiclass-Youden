@@ -1,9 +1,9 @@
 # multiclass-Youden
 This is the R code to implement the proposed semiparametric procedures and reproducing the numerical results in the associated paper ``Semiparametric Estimation of the Generalized Youden Index and the Optimal Cutoff Points for Multiclass Diagnostic Tests''.
 
-The main function is DRM.multiclass.Youden.
-
-    - Purpose: Compute point and interval estimates for the generalized Youden index J_3 and optimal cutoff points c_1, c_2 under the density ratio model for three-class data.
+The main function is DRM.multiclass.Youden. 
+It computes point and interval estimates for the generalized Youden index J_3 and the optimal cutoff points c_1, c_2 
+under the density ratio model for three-class diagnostic test.
     
     - Inputs:
        - obs     : List of 3 numeric vectors. E.g. list(class0_data, class1_data, class2_data)
