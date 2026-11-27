@@ -16,4 +16,4 @@ under the density ratio model for three-class diagnostic test.
     - Outputs:
        - youden  : (1,4) matrix of the generalized Youden index estimates. Columns: est, se, CI.lower, CI.upper.
        - cutoff  : (2,4) matrix of optimal cutoff point estimates. Rows: c1, c2. Columns: est, se, CI.lower, CI.upper.
-       - Sigma_c : (2,2) the asymptotic covariance matrix of vector c.
+       - Sigma_c : (2,2) asymptotic covariance matrix of vector c.
