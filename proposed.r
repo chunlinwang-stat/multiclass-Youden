@@ -418,19 +418,19 @@ DRM.multiclass.Youden = function(obs, qt = 1, level = 0.95, warn = TRUE) {
 #
 # # The output looks like:
 #
-# $youden
-#            est         se  CI.lower  CI.upper
-# [1,] 0.3422817 0.03666769 0.2704144 0.4141491
+# > $youden
+# >            est         se  CI.lower  CI.upper
+# > [1,] 0.3422817 0.03666769 0.2704144 0.4141491
 
-# $cutoff
-#           est         se  CI.lower CI.upper
-# [1,] 1.020739 0.06741537 0.8886077 1.152871
-# [2,] 2.076907 0.10000526 1.8809005 2.272914
+# > $cutoff
+# >           est         se  CI.lower CI.upper
+# > [1,] 1.020739 0.06741537 0.8886077 1.152871
+# > [2,] 2.076907 0.10000526 1.8809005 2.272914
 
-# $Sigma_c
-#             [,1]       [,2]
-# [1,] 0.004544832 0.00341016
-# [2,] 0.003410160 0.01000105
+# > $Sigma_c
+# >             [,1]       [,2]
+# > [1,] 0.004544832 0.00341016
+# > [2,] 0.003410160 0.01000105
 
 
 #########################
@@ -451,15 +451,58 @@ DRM.multiclass.Youden = function(obs, qt = 1, level = 0.95, warn = TRUE) {
 
 # # goodness-of-fit test for the DRM based on MoCA and S-MMSE
 # set.seed(3710)
-# print("MoCA, q(x)=log(x):")
-# print(DRM.gof(obs_moca, qt = 2, B = 500))
+# DRM.gof(obs_moca, qt = 2, B = 500)
+
+# # The output looks like:
+# > $stat
+# > [1] 0.9310599
+# > 
+# > $pval
+# > [1] 0.326
 
 # set.seed(3710)
-# print("S-MMSE, q(x)=log(x):")
-# print(DRM.gof(obs_mmse, qt = 2, B = 500))
+# DRM.gof(obs_mmse, qt = 2, B = 500)
+
+# # The output looks like:
+# > $stat
+# > [1] 1.071284
+# > 
+# > $pval
+# > [1] 0.312
 
 # # the proposed estimates of J, c1, c2 and 95% CIs based on MoCA and S-MMSE
 # DRM.multiclass.Youden(obs_moca, qt = 2)
 
+# # The output looks like:
+# > $youden
+# >            est         se  CI.lower CI.upper
+# > [1,] 0.5635407 0.05474046 0.4562514  0.67083
+# > 
+# > $cutoff
+# >           est        se CI.lower CI.upper
+# > [1,] 20.83053 0.4377166 19.97262 21.68844
+# > [2,] 25.20482 0.2500028 24.71483 25.69482
+# > 
+# > $Sigma_c
+# >            [,1]       [,2]
+# > [1,] 0.19159578 0.05045444
+# > [2,] 0.05045444 0.06250140
+
 # DRM.multiclass.Youden(obs_mmse, qt = 2)
+
+# # The output looks like:
+# > $youden
+# >            est        se  CI.lower  CI.upper
+# > [1,] 0.4233745 0.0599374 0.3058994 0.5408497
+# > 
+# > $cutoff
+# >           est        se CI.lower CI.upper
+# > [1,] 24.38964 0.3674328 23.66948 25.10980
+# > [2,] 27.13688 0.2067437 26.73167 27.54209
+# > 
+# > $Sigma_c
+# >            [,1]       [,2]
+# > [1,] 0.13500687 0.03926525
+# > [2,] 0.03926525 0.04274295
+
 
