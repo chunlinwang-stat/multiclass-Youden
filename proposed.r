@@ -1,5 +1,7 @@
 library(nnet)
 
+## We first define some auxiliary functions "DRM.est", "cal.KS.stat", "DRM.gof", and then proceed to the main function "DRM.multiclass.Youden".
+
 # This function estimates the DRM parameters using three-class multinomial logistic regression.
 
 DRM.est = function(obs, qt = 1) {
